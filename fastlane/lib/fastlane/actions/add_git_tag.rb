@@ -11,7 +11,7 @@ module Fastlane
 
         cmd = ['git tag']
 
-        cmd << ["-am #{message.shellescape}"]
+        cmd << ["-am \"#{message.shellescape}\""]
         cmd << '--force' if options[:force]
         cmd << '-s' if options[:sign]
         cmd << tag.shellescape
